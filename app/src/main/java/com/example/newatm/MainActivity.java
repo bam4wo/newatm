@@ -17,7 +17,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
     boolean logon = false;
     private static final int REQUEST_CODE_LOGIN = 10;
-    private View card;
+    private PokerCord card;
 
 
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                card.setValue(51);
             }
         });
 
