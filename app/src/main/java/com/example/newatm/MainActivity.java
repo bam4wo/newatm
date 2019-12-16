@@ -17,6 +17,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
     boolean logon = false;
     private static final int REQUEST_CODE_LOGIN = 10;
+    private View card;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        card = findViewById(R.id.card);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
 
