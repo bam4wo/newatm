@@ -14,11 +14,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     boolean logon = false;
     private static final int REQUEST_CODE_LOGIN = 10;
     private PokerCord card;
-
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                card.setValue(51);
+                //card.setValue(51);
+                card.setValue(random.nextInt(52));
             }
         });
 
